@@ -1,10 +1,7 @@
-#
-# linux kernel module, simple FIFO implementation with async swaping.
-# Sample shows how to create a fifo of any defined type using linked data.
-#
-##############################################################################
+# linux kernel module, simple cached queue implementation with async swaping.
+# Sample shows how to create a queue of any defined type using linked data.
 
-Модуль ядра Linux, простая реализация FIFO с асинхронным кэшем.
+Модуль ядра Linux, простая реализация очереди с асинхронным кэшем.
 
 I. using linked data   ( ./kernel_mod/linked_data )
 Пример показывает, как создать fifo с произвольноным размером элементов, 
@@ -14,7 +11,7 @@ I. using linked data   ( ./kernel_mod/linked_data )
 использующих асинхронный обмен с кэшем с применением макросов из linux/kfifo.h 
 и linux/list.h, вместо использования связанных структур данных. 
 
-Согласно задания 'C++.Unix_v1.pdf' модуль хранит в оперативной памяти очередь 
+Согласно задания 'task.txt' модуль хранит в оперативной памяти очередь 
 произвольных сообщений до 64К каждое. Размер очереди ограничен 1024 
 элементами. Модуль обеспечивает интерфейс push_back() и pop_front(), используя 
 символьное устройство /dev/heap. Модуль выполняет обмен с файловой системой, 
@@ -38,6 +35,7 @@ I. using linked data   ( ./kernel_mod/linked_data )
 Файловое хранилище располагается в /var/log/heap
 
 Установка модуля:
+
     $ uname -r
     4.16.3-301.fc28.i686
     
