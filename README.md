@@ -1,5 +1,5 @@
 # linux kernel module, simple cached queue implementation with async swaping.
-# Sample shows how to create a queue of any defined type using linked data.
+## Sample shows how to create a queue of any defined type using linked data.
 
 Модуль ядра Linux, простая реализация очереди с асинхронным кэшем.
 
@@ -60,7 +60,8 @@ I. using linked data   ( ./kernel_mod/linked_data )
 процедура удаления:
     
     # rmmod heap
-
+    # setenforce Enforcing
+    
 
 II. Консольное приложение ( ./sender_app ) взаимодействует с модулем ядра, 
 записывая произвольные сообщения размером до 64K в /dev/heap. Приложение 
